@@ -1,0 +1,66 @@
+<div class="w3-padding-64 w3-container">
+  <div class="container">
+    <div class="modal-dialog login animated">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">S'inscrire avec</h4>
+        </div>
+        <div class="modal-body">
+          <div class="box">
+            <div class="content">
+              <div class="social">
+                <a class="circle github" href="#">
+                  <i class="fa fa-github fa-fw"></i>
+                </a>
+                <a id="google_login" class="circle google" href="#">
+                  <i class="fa fa-google-plus fa-fw"></i>
+                </a>
+                <a id="facebook_login" class="circle facebook" href="#">
+                  <i class="fa fa-facebook fa-fw"></i>
+                </a>
+              </div>
+              <div class="division">
+                <div class="line l"></div>
+                <span>ou </span>
+                <div class="line r"></div>
+              </div>
+              <div class="error"></div>
+
+            <div class="content registerBox">
+              <div class="form">
+                <form  [formGroup]="registerUserForm" (ngSubmit)="onSubmit()">
+
+                  <input id="email" class="form-control" type="email" placeholder="Email" name="email" formControlName="email" (blur)="logValidationErrors()">
+                  <span class="text-danger" *ngIf="formErrors.email">
+                    {{formErrors.email}}
+                    </span>
+                  <input id="lastName" class="form-control" type="text" placeholder="Last name" name="lastName" formControlName="lastName" (blur)="logValidationErrors()">
+                  <span class="text-danger" *ngIf="formErrors.lastName">
+                    {{formErrors.lastName}}
+                    </span>
+                  <input id="firstName" class="form-control" type="text" placeholder="First name" name="firstName" formControlName="firstName" (blur)="logValidationErrors()">
+                  <span class="text-danger" *ngIf="formErrors.firstName">
+                    {{formErrors.firstName}}
+                    </span>
+                  <input id="password" class="form-control" type="password" placeholder="Password" name="password" formControlName="password" (blur)="logValidationErrors()">
+                  <span class="text-danger" *ngIf="formErrors.password">
+                    {{formErrors.password}}
+                    </span>
+                  <input class="btn btn-default btn-register" type="submit" value="Create account"  [disabled]="!registerUserForm.valid" name="commit">
+                </form>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <div class="forgot register-footer" >
+            <span>Vous avez déja un compte EyeSky ?</span>
+            <a routerLink="/login"> se connecter</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

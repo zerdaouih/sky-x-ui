@@ -1,0 +1,20 @@
+<head>
+  <title>Eye Sky</title>
+</head>
+<!-- Navbar -->
+<nav>
+  <div class="w3-top">
+    <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+      <a routerLink="/home" routerLinkActive="active" class="nav-link"
+         class="w3-bar-item w3-button w3-padding-large w3-white w3-">Home</a>
+      <a routerLink="/search" routerLinkActive="active" class="nav-link"
+         class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Chercher un service</a>
+      <a routerLink="/provider" routerLinkActive="active" class="nav-link"
+         class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Devenir prestataire</a>
+      <a *ngIf="!isUserLoggedIn" routerLink="/login" routerLinkActive="active" class="nav-link"
+         class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Connexion</a>
+      <a *ngIf="!isUserLoggedIn" routerLink="/register" routerLinkActive="active" class="nav-link"
+         class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Inscription</a>
+    </div>
+  </div>
+</nav>
