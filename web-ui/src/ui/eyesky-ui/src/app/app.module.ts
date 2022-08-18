@@ -8,7 +8,7 @@ import {FooterComponent} from './home/footer/footer.component';
 import {LoginComponent} from './login/login.component';
 import {WelcomeComponent} from './home/welcome/welcome.component';
 import {RegisterComponent} from './register/register.component';
-import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
+import {HttpClientModule} from "@angular/common/http";
 import {EmailValidator, ReactiveFormsModule} from "@angular/forms";
 import {RegisterSuccessComponent} from "./register/register-success/register-success.component";
 import {authInterceptorProviders} from "./_helper/auth/auth.interceptor";

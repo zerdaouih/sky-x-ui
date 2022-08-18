@@ -1,6 +1,5 @@
-import {AbstractControl, FormControl, FormGroup, ValidationErrors, ValidatorFn} from '@angular/forms';
+import {FormGroup} from '@angular/forms';
 import {Injectable} from "@angular/core";
-import {RegisterService} from "../service/register.service";
 import {UserService} from "../service/user.service";
 
 @Injectable({

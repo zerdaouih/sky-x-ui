@@ -1,8 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup} from "@angular/forms";
-import {FormBuilder} from '@angular/forms';
-import {Validators} from '@angular/forms';
-import {FormArray} from '@angular/forms';
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {RegisterService} from "../service/register.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {EmailValidator} from "../shared/EmailValidator";

@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { RegisterSuccessComponent } from './register-success.component';
+import {RegisterSuccessComponent} from './register-success.component';
 
 describe('RegisterSuccessComponent', () => {
   let component: RegisterSuccessComponent;

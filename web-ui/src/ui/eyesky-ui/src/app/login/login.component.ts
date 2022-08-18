@@ -1,10 +1,8 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {ActivatedRoute, Router} from "@angular/router";
 import {LoginService} from "../service/login.service";
-import {EmailValidator} from "../shared/EmailValidator";
 import {TokenStorageService} from "../_helper/auth/jwt/token-storage.service";
-import {HeaderComponent} from "../home/header/header.component";
 
 @Component({
   selector: 'app-login',

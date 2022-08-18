@@ -2,8 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 
 import {Observable} from 'rxjs';
-import {catchError, map} from 'rxjs/operators';
-import {User} from "../model/user";
+import {catchError} from 'rxjs/operators';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -22,7 +21,7 @@ export class UserService {
   }
 
   checkUserEmailExist(email: string): Observable<boolean> {
-    return this.http.post<string>('api/secure/login/checkmail', email, httpOptions)
+    return this.http.get<string>('api/secure/login/checkmail/' + email)
       .pipe(
         catchError(null)
       );
