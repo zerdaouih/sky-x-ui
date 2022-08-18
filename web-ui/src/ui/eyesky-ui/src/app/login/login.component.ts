@@ -54,7 +54,8 @@ export class LoginComponent implements OnInit {
   validateLogin() {
     this.loginService.login(this.loginForm.get('email').value, this.loginForm.get('password').value).subscribe(
       data => {
-        this.tokenStorage.saveToken(data.accessToken);
+        console.log(" validate login data >>>" + JSON.stringify(data));
+        this.tokenStorage.saveToken(data.token);
         this.tokenStorage.saveUser(data);
         this.isLoginFailed = false;
         this.isLoggedIn = true;

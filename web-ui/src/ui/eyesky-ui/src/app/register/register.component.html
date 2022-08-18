@@ -47,6 +47,9 @@
                     {{formErrors.password}}
                     </span>
                   <input class="btn btn-default btn-register" type="submit" value="Create account"  [disabled]="!registerUserForm.valid" name="commit">
+                  <span class="text-danger" *ngIf="this.isSignUpFailed">
+                    {{this.errorMessage}}
+                    </span>
                 </form>
               </div>
             </div>
